@@ -74,6 +74,10 @@ app.get('/dashboard', authenticateToken, (req, res) => {
   res.json({ message: 'Welcome to your dashboard!' });
 });
 
+app.get('/' , (req, res) =>{
+  res.send("Hello from server!")
+}) 
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
